@@ -7,7 +7,7 @@ sources/*.out
 sources/*.a
 sources/*.o
 
-# libraries/*.a maybe libft.a
+libraries/*.a
 libraries/*.o
 
 #VSCODE extensions
