@@ -1,0 +1,18 @@
+#    |\__/,|   (`\
+#  _.|o o  |_   ) )
+#-(((---(((--------     Larcrist
+
+#Dont go, pls
+sources/*.out
+sources/*.a
+sources/*.o
+
+# libraries/*.a maybe libft.a
+libraries/*.o
+
+#VSCODE extensions
+.vscode/
+obj/*
+
+#Ignore the Norma
+

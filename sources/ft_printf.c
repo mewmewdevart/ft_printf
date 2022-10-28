@@ -6,8 +6,8 @@
 /*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:38:00 by larcrist          #+#    #+#             */
-/*   Updated: 2022/10/28 12:38:01 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/10/28 12:41:52 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "../libraries/ft_printf.h"
