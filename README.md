@@ -63,6 +63,14 @@ To use the ft_printf actions in your code, simply include its header:
 ```C
 #include "libraries/ft_printf.h"
 ```
-And ...
+If you try to compile your .c files with cc using "cc example.c" you will get an undefined symbol error for Libftprintf functions.
+
+You have to tell the file which library it's using:
+```shell
+$ cc example.c libftprintf.a -o prog_example
+```
+That's it. Now run it using ./prog_example
+
+
 
 <p align="center"> Developed with love 💜 by Larissa Cristina Benedito (Mewmew/Larcrist). </p>
