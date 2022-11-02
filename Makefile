@@ -6,7 +6,7 @@
 #    By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 11:54:05 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/01 23:20:34 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/02 12:07:48 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,9 +39,13 @@ WHITE = \033[0;97m
 
 # compilation and linking
 all: $(NAME)
-	@echo "Makefile automatized by Larcrist ┌( ಠ_ಠ)┘"
-$(NAME): $(OBJECTS)
+	@echo "$(GREEN)The Makefile of printf has compilated!$(DEF_COLOR)" 
+
+$(NAME): $(LIBFT) $(OBJECTS)
 	$(AR) $(NAME) $@ $^
+
+$(LIBFT):
+	@make -C libraries/libft
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -49,13 +53,17 @@ $(NAME): $(OBJECTS)
 
 clean:
 	$(REMOVE) $(OBJECTS)
-	@echo "$(GREEN)Object files cleaned! (ノಠ益ಠ)ノ彡$(DEF_COLOR)"
+	@make clean -C libraries/libft
+	@echo "$(BLUE)Object files cleaned! (ノಠ益ಠ)ノ彡$(DEF_COLOR)"
+	
 
 fclean: clean
 	$(REMOVE) $(NAME)
-	@echo "$(GREEN)Executable files cleaned! (✖╭╮✖)$(DEF_COLOR)"
+	@make fclean -C libraries/libft
+	@echo "$(BLUE)Executable files cleaned! (✖╭╮✖)$(DEF_COLOR)"
+	
 
 re: fclean all
-	@echo "$(GREEN)Cleaned and rebuilt everything! ᕦ(ò_óˇ)ᕤ$(DEF_COLOR)" 
+	 @echo "$(BLUE)Cleaned and rebuilt everything! ᕦ(ò_óˇ)ᕤ$(DEF_COLOR)" 
 
 .PHONY: all clean fclean re
