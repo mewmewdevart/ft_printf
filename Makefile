@@ -6,7 +6,7 @@
 #    By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 11:54:05 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/01 23:15:28 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/01 23:20:34 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ WHITE = \033[0;97m
 
 # compilation and linking
 all: $(NAME)
-	@echo "Makefile automatized by Larcrist ฅ^•ﻌ•^ฅ"
+	@echo "Makefile automatized by Larcrist ┌( ಠ_ಠ)┘"
 $(NAME): $(OBJECTS)
 	$(AR) $(NAME) $@ $^
 
