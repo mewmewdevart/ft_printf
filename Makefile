@@ -6,7 +6,7 @@
 #    By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 11:54:05 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/02 12:51:39 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/02 19:30:39 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ WHITE = \033[0;97m
 
 # compilation and linking
 all: $(NAME)
-	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of printf has been compilated!$(DEF_COLOR)" 
+	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of [Printf] has been compilated!$(DEF_COLOR)" 
 
 $(NAME): $(LIBFT) $(OBJECTS)
 	$(AR) $(NAME) $@ $^
@@ -54,16 +54,16 @@ $(LIBFT):
 clean:
 	$(REMOVE) $(OBJECTS)
 	@make clean -C libraries/libft
-	@echo "$(BLUE)Object files cleaned!$(DEF_COLOR)"
+	@echo "$(BLUE)[Printf] Object files cleaned!$(DEF_COLOR)"
 	
 
 fclean: clean
 	$(REMOVE) $(NAME)
 	@make fclean -C libraries/libft
-	@echo "$(BLUE)Executable files cleaned!$(DEF_COLOR)"
+	@echo "$(BLUE)[Printf] Executable files cleaned!$(DEF_COLOR)"
 	
 
 re: fclean all
-	 @echo "$(BLUE)Cleaned and rebuilt everything!$(DEF_COLOR)" 
+	 @echo "$(BLUE)[Printf] Cleaned and rebuilt everything!$(DEF_COLOR)" 
 
 .PHONY: all clean fclean re
