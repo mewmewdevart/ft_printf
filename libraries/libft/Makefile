@@ -6,7 +6,7 @@
 #    By: larcrist <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:58:09 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/02 11:30:05 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/02 12:53:07 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ WHITE = \033[0;97m
 
 # compilation and linking
 all: $(NAME)
-	@echo "$(GREEN)The Makefile of libft has compiled!$(DEF_COLOR)"
+	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of libft has been compiled!$(DEF_COLOR)"
 
 $(NAME): $(OBJECTS)
 	@$(AR) $(NAME) $@ $^
@@ -80,10 +80,13 @@ $(NAME): $(OBJECTS)
 
 clean:
 	@$(REMOVE) $(OBJECTS)
+	@echo "$(BLUE)Object files cleaned!$(DEF_COLOR)"
 
 fclean: clean
 	@$(REMOVE) $(NAME)
+	@echo "$(BLUE)Executable files cleaned!$(DEF_COLOR)"
 
 re: fclean all
+	@echo "$(BLUE)Cleaned and rebuilt everything!$(DEF_COLOR)"
 
 .PHONY: all clean fclean re
