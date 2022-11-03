@@ -15,7 +15,8 @@
 
 ## 💡 About the project
 
-> _I have to recode the printf() function from libc. My function has to handle the following conversions: ↓ 
+> _The printf() function sends a formatted string to the standard output (the display).
+I have to recode the printf() function for my [libft](https://github.com/mewmewdevart/libft) library. My function has to handle the following conversions: ↓ 
 > - %c Prints a single character.
 > - %s Prints a string (as defined by the common C convention).
 > - %p The void * pointer argument has to be printed in hexadecimal format.
@@ -60,17 +61,38 @@ $ make
 
 To use the ft_printf actions in your code, simply include its header:
 
-```C
+```c
 #include "libraries/ft_printf.h"
 ```
-If you try to compile your .c files with cc using "cc example.c" you will get an undefined symbol error for Libftprintf functions.
+And create a main with some inserts/conversions <br>
+Example ``main.c``:
+```c  
+#include "libraries/ft_printf.h"
+
+int	main(void)
+{
+	char *string;
+	
+	string = "larissa";
+	ft_printf("%s ", string);
+	return (0);
+}
+```
+
+If you try to compile your .c files with cc using "cc main.c" you will get an undefined symbol error for Libftprintf functions.
 
 You have to tell the file which library it's using:
 ```shell
-$ cc example.c libftprintf.a -o prog_example
+$ cc main.c libftprintf.a -o prog_example
 ```
-That's it. Now run it using ./prog_example
+To run the program, enter the following in the command prompt:
 
-
+```shell
+$ ./prog_example
+```
+The example I showed you will allow you to view a string of characters that will be displayed in your terminal like this:
+```shell
+$ larissa
+```
 
 <p align="center"> Developed with love 💜 by Larissa Cristina Benedito (Mewmew/Larcrist). </p>
