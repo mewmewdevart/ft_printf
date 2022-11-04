@@ -1,6 +1,35 @@
-- Como o printf funciona?
-	- Quais são os dados primarios dele?
+- A função printf() e como ela funciona
+	A função é pré-definida e está armazenada na biblioteca <stdio.h> da linguagem C.
+	Ela permite representar na tela valores de qualquer tipo de dado, ela utiliza o mecanismo de formatação, que permite traduzir a representação interna de variaveis para a representação ASCII.
+
+	- Argumento : O primeiro argumento de printf é um string de controle, uma seqüência de caracteres entre aspas  duplas "". Esta string, que sempre deve estar presente, pode especificar através de caracteres especiais (as sequencias de conversao) quantos argumentos estarão presentes nesta invocação da função.
+	Estes outros argumentos serão variáveis cujos valores serão formatados e apresentados na tela.
+
+		printf(string de dados e formato, var1, var2,…, varN);
+
+	- Observação:  A seqüência de conversão pode ocorrer dentro de qualquer posição dentro do string de controle.
+	 A seqüência de conversão pode ser reconhecida dentro da string de controle por iniciar sempre com o caráter %.
+
+- Conversoes do desafio:
+• %c Prints a single character.
+• %s Prints a string (as defined by the common C convention).
+• %p The void * pointer argument has to be printed in hexadecimal format.
+• %d Prints a decimal (base 10) number.
+• %i Prints an integer in base 10.
+• %u Prints an unsigned decimal (base 10) number.
+• %x Prints a number in hexadecimal (base 16) lowercase format.
+• %X Prints a number in hexadecimal (base 16) uppercase format.
+• %% Prints a percent sign.
+
+Link: https://www.dca.fee.unicamp.br/cursos/EA876/apostila/HTML/node131.html
+	https://www.sciencedirect.com/topics/computer-science/printf
+
 - O que são funções variadicas?
+	Uma função variádica é uma função que permite a passagem de um número indeterminado de parâmetros. 
+
+	<stdarg.h>
+
+Link: https://www.vivaolinux.com.br/artigo/Linguagem-C-Funcoes-Variadicas
 - O que é o Bitwise?
 
 
