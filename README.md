@@ -27,6 +27,15 @@ I have to recode the printf() function for my [libft](https://github.com/mewmewd
 > - %X Prints a number in hexadecimal (base 16) uppercase format.
 > - %% Prints a percent sign.
 
+## 📁 Files/src
+* [`libraries`](libraries) 
+	Calling for functions. <br>
+	- ```libft/``` My custom-made library [see the project here](https://github.com/mewmewdevart/libft)
+	- ```ft_printf.h``` My ft_printf header to connect the functions created for this project.
+
+* [`sources`](sources) 
+	Calling for functions. <br>
+	- ```ft_printf.c``` //soon
 
 ## 🛠️ Usage
 
