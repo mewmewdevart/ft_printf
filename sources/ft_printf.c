@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+<<<<<<< HEAD
 #include "../libraries/ft_printf.h"
 #include <stdio.h>
 
@@ -38,3 +39,6 @@ int	main (void)
 	return (0);
 }
 
+=======
+#include "../libraries/ft_printf.h"
+>>>>>>> 0391a27eb4afc757da5c18995d9fa7fc07c650b0
