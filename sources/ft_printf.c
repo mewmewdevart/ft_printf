@@ -6,7 +6,7 @@
 /*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 20:06:54 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/08 22:24:20 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/08 22:28:41 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ int	main (void)
 	ft_printf("larissa %d", number);
 	return (0);
 }
-
