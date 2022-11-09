@@ -6,7 +6,7 @@
 #    By: larcrist <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:58:09 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/08 20:37:32 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/09 00:07:59 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SOURCES = sources/conversions/ft_atoi.c \
 	sources/manipulate_strings/ft_strrchr.c \
 	sources/manipulate_strings/ft_strtrim.c \
 	sources/manipulate_strings/ft_substr.c \
+	sources/manipulate_strings/ft_putstr.c \
 	sources/get_next_line/get_next_line.c \
 
 # .c files = .o files

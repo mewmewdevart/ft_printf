@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 02:19:27 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/08 20:35:43 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/09 00:09:45 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,14 @@ int			ft_isdigit(int c);
 int			ft_isprint(int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
-void		ft_putchar(char c);
+int			ft_putchar(char c);
 
 /* -------◊	FUNCTIONS TO MANIPULATE STRINGS	◊------- */
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int			ft_putstr(char *str);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
