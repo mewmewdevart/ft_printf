@@ -13,7 +13,7 @@
 #include "../libraries/ft_printf.h"
 #include <stdio.h>
 
-static int	ft_conversion(va_list arg, char character);
+static int	ft_translate(va_list arg, char character);
 
 int	ft_printf(const char *str, ...)
 {
@@ -24,6 +24,8 @@ int	ft_printf(const char *str, ...)
 	index = 0;
 	type_return = 0;
 	va_start(arg, str);
+	if(!str)
+		return(0);
 	while (str[index] != '\0')
 	{
 		if (str[index] != '%')
@@ -34,7 +36,7 @@ int	ft_printf(const char *str, ...)
 		else
 		{
 			index++;
-			ft_conversion(arg, str[index]);
+			ft_translate(arg, str[index]);
 		}
 		index++;
 	}
@@ -42,7 +44,7 @@ int	ft_printf(const char *str, ...)
 	return (type_return);
 }
 
-static int	ft_conversion(va_list arg, char character)
+static int	ft_translate(va_list arg, char character)
 {
 	int	type_return;
 
@@ -60,7 +62,7 @@ static int	ft_conversion(va_list arg, char character)
 	else if (character == 'x')
 		printf("%%X prints a number in hexadecimal (base 16) uppercase format.");
 	else if (character == '%')
-		printf("%% prints a percent sign.");
+		return (write(1, "%", 1)); //%% printf percent sign %
 	else
 		type_return = ft_putchar(va_arg(arg, int)); //%c prints a single character
 	return (type_return);

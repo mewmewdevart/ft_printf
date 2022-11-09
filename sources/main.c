@@ -22,4 +22,7 @@ int	main (void)
 	printf("\n Esse é o printf() para printar string = %s", string);
 	printf("\n *********************** \n");
 
+	ft_printf("%%");
+	printf("\n%%\n");
+
 }
