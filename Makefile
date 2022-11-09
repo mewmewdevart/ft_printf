@@ -6,7 +6,7 @@
 #    By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 11:54:05 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/08 22:25:51 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/09 01:09:03 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,9 @@ fclean: clean
 	
 
 re: fclean all
-	 @echo "$(BLUE)[PRINTF] Cleaned and rebuilt everything!$(DEF_COLOR)" 
+	 @echo "$(BLUE)[PRINTF] Cleaned and rebuilt everything!$(DEF_COLOR)"
 
-.PHONY: all clean fclean re
+norm:
+	@norminette
+
+.PHONY: all clean fclean re norm
