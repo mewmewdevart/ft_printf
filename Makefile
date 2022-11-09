@@ -6,7 +6,7 @@
 #    By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 11:54:05 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/02 20:19:15 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/08 22:25:51 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,10 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 REMOVE = rm -rf
 # import library
-LIBFT = libraries/libft/libft.a
+LIBFT = ./libftprintf.a
 
 # my archives/functions
 SOURCE = sources/ft_printf.c \
-	 sources/ft_printf_utils.c \
 
 # .c files = .o files
 OBJECTS = $(SOURCE:.c=.o)
@@ -46,6 +45,7 @@ $(NAME): $(LIBFT) $(OBJECTS)
 
 $(LIBFT):
 	@make -C libraries/libft
+	@mv libraries/libft/libft.a ./libftprintf.a
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

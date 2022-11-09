@@ -6,7 +6,7 @@
 #    By: larcrist <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 16:58:09 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/02 17:10:05 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/08 20:37:32 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SOURCES = sources/conversions/ft_atoi.c \
 	sources/manipulate_characters/ft_isprint.c \
 	sources/manipulate_characters/ft_tolower.c \
 	sources/manipulate_characters/ft_toupper.c \
+	sources/manipulate_characters/ft_putchar.c \
 	sources/manipulate_memory/ft_bzero.c \
 	sources/manipulate_memory/ft_calloc.c \
 	sources/manipulate_memory/ft_memchr.c \
