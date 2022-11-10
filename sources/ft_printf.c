@@ -62,7 +62,7 @@ static int	ft_translate(va_list arg, char character)
 	else if (character == 'x')
 		printf("%%X prints a number in hexadecimal (base 16) uppercase format.");
 	else if (character == '%')
-		return (write(1, "%", 1)); //%% printf percent sign %
+		type_return = ft_putchar('%'); //%% printf percent sign %
 	else
 		type_return = ft_putchar(va_arg(arg, int)); //%c prints a single character
 	return (type_return);
