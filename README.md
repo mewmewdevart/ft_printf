@@ -9,8 +9,7 @@
 <p align="center">
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/mewmewdevart/ft_printf?color=6272a4" />
 	<img alt="Main language" src="https://img.shields.io/github/languages/top/mewmewdevart/ft_printf?color=6272a4"/>
-	<img alt="Main language" src="https://img.shields.io/github/license/mewmewdevart/ft_printf?color=6272a4"/>
-	<img alt="Number of lines" src="https://img.shields.io/tokei/lines/github/mewmewdevart/ft_printf?color=6576AA"/>
+	<img alt="License" src="https://img.shields.io/github/license/mewmewdevart/ft_printf?color=6272a4"/>
 </p>
 
 ## 💡 About the project
