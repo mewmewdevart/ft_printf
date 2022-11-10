@@ -27,14 +27,29 @@ Link: https://www.dca.fee.unicamp.br/cursos/EA876/apostila/HTML/node131.html
 	https://www.sciencedirect.com/topics/computer-science/printf
 
 - O que são funções variadicas?
-	Uma função variádica é uma função que permite a passagem de um número indeterminado de parâmetros. 
+	Uma função variádica é uma função que permite a passagem de um número indeterminado de parâmetros. Uma função de argumentos variáveis é definida com a reticências (, ... ) no final da lista de parâmetros.
 
 	<stdarg.h>
 
 
-<<<<<<< HEAD
+	Variavel:
+		va_list
+			Este é um tipo adequado para armazenar as informações necessárias pelas três macros va_start ( ), va_arg ( ) e va_end ( ).
+
+	Macros:
+		void va_start ( va_list ap, last_arg )
+			This macro initializes ap variable to be used with the va_arg and va_end macros. The last_arg is the last known fixed argument being passed to the function i.e. the argument before the ellipsis.
+		
+		type va_arg(va_list ap, type)
+			This macro retrieves the next argument in the parameter list of the function with type type.
+
+		void va_end(va_list ap)
+			This macro allows a function with variable arguments which used the va_start macro to return. If va_end is not called before returning from the function, the result is undefined.
+
+
+Link : https://www.tutorialspoint.com/c_standard_library/stdarg_h.htm
+
 Link : https://linux.die.net/man/3/stdarg
-=======
 https://petbcc.ufscar.br/stdarg/
 
 http://linguagemc.com.br/struct-em-c/
