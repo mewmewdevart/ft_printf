@@ -31,6 +31,7 @@ SOURCES = sources/conversions/ft_atoi.c \
 	sources/manipulate_characters/ft_tolower.c \
 	sources/manipulate_characters/ft_toupper.c \
 	sources/manipulate_characters/ft_putchar.c \
+	sources/manipulate_characters/ft_putnbr.c \
 	sources/manipulate_memory/ft_bzero.c \
 	sources/manipulate_memory/ft_calloc.c \
 	sources/manipulate_memory/ft_memchr.c \

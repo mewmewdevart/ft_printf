@@ -54,7 +54,7 @@ static int	ft_translate(va_list arg, char character)
 	else if(character == 'p')
 		printf("%%p the void * pointer argument has to be printed in hexadecimal format.");
 	else if (character == 'd' || character == 'i')
-		printf("%%d and %%i prints a decimal (base 10) number.");
+		type_return = ft_putnbr(va_arg(arg, int)); //%d and %i prints a decimal (base 10) number."
 	else if (character == 'u')
 		printf("%%u prints an unsigned decimal (base 10) number");
 	else if (character == 'x')

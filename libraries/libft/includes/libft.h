@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 02:19:27 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/09 00:09:45 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/10 21:00:29 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int			ft_isprint(int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_putchar(char c);
+int		ft_putnbr(int nb);
 
 /* -------◊	FUNCTIONS TO MANIPULATE STRINGS	◊------- */
 size_t		ft_strlen(const char *s);
