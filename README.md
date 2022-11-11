@@ -32,9 +32,13 @@ I have to recode the printf() function for my [libft](https://github.com/mewmewd
 	- ```libft/``` My custom-made library [see the project here](https://github.com/mewmewdevart/libft)
 	- ```ft_printf.h``` My ft_printf header to connect the functions created for this project.
 
-* [`sources`](sources) 
-	Calling for functions. <br>
-	- ```ft_printf.c``` //soon
+* [`sources`](sources)/[`ft_printf.c`](sources/ft_printf.c)  Function implementation.
+	- ```ft_translate``` translate what happens after the % symbol
+		- ```ft_putchar``` write a character, of unsigned char type, to stdout <br>
+		- ```ft_putnbr``` function to diplay number (converted) with "ft_putchar" function
+		- //soon
+* [`Makefile`](Makefile)
+	- My build automation between libft and ft_printf libraries
 
 ## 🛠️ Usage
 
