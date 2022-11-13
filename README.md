@@ -14,8 +14,7 @@
 
 ## 💡 About the project
 
-> _The printf() function sends a formatted string to the standard output (the display).
-I have to recode the printf() function for my [libft](https://github.com/mewmewdevart/libft) library. My function has to handle the following conversions: ↓ 
+> _For the ft_printf() project of the 42 school cursus, we must recreate the famous C library printf() function. This project teaches us about variadic arguments. The printf() function sends a formatted string to the standard output (the display). <br> My ft_printf has to handle the following conversions: ↓ 
 > - %c Prints a single character.
 > - %s Prints a string (as defined by the common C convention).
 > - %p The void * pointer argument has to be printed in hexadecimal format.
@@ -26,13 +25,17 @@ I have to recode the printf() function for my [libft](https://github.com/mewmewd
 > - %X Prints a number in hexadecimal (base 16) uppercase format.
 > - %% Prints a percent sign.
 
-## 📁 Files/src
-* [`libraries`](libraries) 
-	Calling for functions. <br>
+## 📁 Files/
+* [`libraries/`](libraries) 
+	Calling for my libraries <br>
 	- ```libft/``` My custom-made library [see the project here](https://github.com/mewmewdevart/libft)
 	- ```ft_printf.h``` My ft_printf header to connect the functions created for this project.
 
-* [`sources`](sources)/[`ft_printf.c`](sources/ft_printf.c)  Function implementation.
+* [`sources/`](sources)[`ft_printf.c`](sources/ft_printf.c)  
+	My main function implementation. <br>
+	- ```ft_printf``` translate what happens after the % symbol
+		- ```ft_putchar``` write a character, of unsigned char type, to stdout <br>
+
 	- ```ft_translate``` translate what happens after the % symbol
 		- ```ft_putchar``` write a character, of unsigned char type, to stdout <br>
 		- ```ft_putnbr``` function to diplay number (converted) with "ft_putchar" function
