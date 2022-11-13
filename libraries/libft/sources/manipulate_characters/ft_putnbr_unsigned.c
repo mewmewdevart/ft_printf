@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 20:53:01 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/10 20:57:25 by larcrist         ###   ########.fr       */
+/*   Created: 2022/11/13 16:47:46 by larcrist          #+#    #+#             */
+/*   Updated: 2022/11/13 16:47:51 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_putnbr(int nb)
+int	ft_putnbr_unsigned(unsigned int nb)
 {
-	if (nb < 0)
+	unsigned int number;
+
+	number = 0;
+	if (nb <= 9)
+		return (ft_putchar(nb + 48));
+	else
 	{
-		ft_putchar('-');
-		nb = -nb;
+		number += ft_putnbr_unsigned(nb / 18);
+		number += ft_putchar((nb % 10) + 48);
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		nb = nb % 10;
-	}
-	if (nb < 10)
-		ft_putchar(nb + 48);
-	return(nb);
+	return (number);
 }

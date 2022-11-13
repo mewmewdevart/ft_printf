@@ -52,15 +52,13 @@ static int	ft_translate(va_list arg, char character)
 	if (character == 's')
 		type_return = ft_putstr(va_arg(arg, char *)); //%s prints a string (as defined by the common C convention
 	else if(character == 'p')
-		printf("%%p the void * pointer argument has to be printed in hexadecimal format.");
+		type_return = ft_putptr(va_arg(arg, unsigned long int)); //the void * pointer argument has to be printed in hexadecimal format."
 	else if (character == 'd' || character == 'i')
-		type_return = ft_putnbr(va_arg(arg, int)); //%d and %i prints a decimal (base 10) number."
-	else if (character == 'u')
-		printf("%%u prints an unsigned decimal (base 10) number");
-	else if (character == 'x')
-		printf("%%x prints a number in hexadecimal (base 16) lowercase format.");
-	else if (character == 'x')
-		printf("%%X prints a number in hexadecimal (base 16) uppercase format.");
+		type_return = ft_putnbr(va_arg(arg, unsigned long int)); //%d and %i prints a decimal (base 10) number."
+	else if (character == 'u') //%u prints an unsigned decimal (base 10) number"
+		type_return = ft_putnbr_unsigned(va_arg(arg, unsigned int));
+	else if (character == 'x' || character == 'X') //%x prints a number in hexadecimal (base 16) lowercase and uppercase format."
+		type_return = ft_puthexa(va_arg(arg, unsigned int), character);
 	else if (character == '%')
 		type_return = ft_putchar('%'); //%% printf percent sign %
 	else

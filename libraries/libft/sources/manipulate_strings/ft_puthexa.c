@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 20:53:01 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/10 20:57:25 by larcrist         ###   ########.fr       */
+/*   Created: 2022/11/13 16:19:45 by larcrist          #+#    #+#             */
+/*   Updated: 2022/11/13 16:19:48 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_putnbr(int nb)
+//this function is helper of ft_putptr (printer address of pointer)
+int	ft_puthexa(unsigned long number, int flag)
 {
-	if (nb < 0)
+	int	count;
+
+	count = 0;
+	if (number >= 16)
 	{
-		ft_putchar('-');
-		nb = -nb;
+		count = count + ft_puthexa((number / 16), flag);
+		count = count + ft_puthexa((number % 16), flag);
 	}
-	if (nb >= 10)
+	else
 	{
-		ft_putnbr(nb / 10);
-		nb = nb % 10;
+		if (flag == 'x')
+			return (ft_putchar(HEX_LOWCASE[number]));
+		else
+			return (ft_putchar(HEX_UPCASE[number]));
 	}
-	if (nb < 10)
-		ft_putchar(nb + 48);
-	return(nb);
+	return (count);
 }

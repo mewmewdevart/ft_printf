@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 20:53:01 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/10 20:57:25 by larcrist         ###   ########.fr       */
+/*   Created: 2022/11/13 16:00:54 by larcrist          #+#    #+#             */
+/*   Updated: 2022/11/13 16:00:59 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_putnbr(int nb)
+int	ft_putptr(unsigned long int ptr)
 {
-	if (nb < 0)
+	int	address;
+
+	address = 0;
+	if (!ptr)
 	{
-		ft_putchar('-');
-		nb = -nb;
+		address += ft_putstr ("(nill)");
+		return (address);
 	}
-	if (nb >= 10)
+	else
 	{
-		ft_putnbr(nb / 10);
-		nb = nb % 10;
+		address = ft_putstr ("0x");
+		address += ft_puthexa(ptr, 'x');
 	}
-	if (nb < 10)
-		ft_putchar(nb + 48);
-	return(nb);
+	return (address);
 }

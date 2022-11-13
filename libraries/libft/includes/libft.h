@@ -16,7 +16,12 @@
 # include <unistd.h> // write
 # include <stdlib.h> // malloc(), free() and size_t
 
-# define BUFFER_SIZE	1024 // buffer_size of gnl
+// buffer_size of gnl
+# define BUFFER_SIZE	1024
+
+// hexadecimal of ft_printf - putptr, puthexa
+# define HEX_LOWCASE "0123456789abcdef"
+# define HEX_UPCASE  "0123456789ABCDEF"
 
 /* -------◊	FUNCTIONS TO MANIPULATE CHARACTERS	◊------- */
 int			ft_isalnum(int c);
@@ -27,7 +32,7 @@ int			ft_isprint(int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_putchar(char c);
-int		ft_putnbr(int nb);
+int			ft_putnbr(int nb);
 
 /* -------◊	FUNCTIONS TO MANIPULATE STRINGS	◊------- */
 size_t		ft_strlen(const char *s);
@@ -44,6 +49,9 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *str, char c);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+int			ft_putptr(unsigned long int ptr);
+int			ft_puthexa(unsigned long number, int flag);
+int			ft_putnbr_unsigned(unsigned int nb);
 
 /* -------◊		FUNCTIONS TO CONVERSION/STRINGS FOR INTEGERS	◊------- */
 int			ft_atoi(const char *nptr);

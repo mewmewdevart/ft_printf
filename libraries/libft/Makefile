@@ -32,6 +32,7 @@ SOURCES = sources/conversions/ft_atoi.c \
 	sources/manipulate_characters/ft_toupper.c \
 	sources/manipulate_characters/ft_putchar.c \
 	sources/manipulate_characters/ft_putnbr.c \
+	sources/manipulate_characters/ft_putnbr_unsigned.c \
 	sources/manipulate_memory/ft_bzero.c \
 	sources/manipulate_memory/ft_calloc.c \
 	sources/manipulate_memory/ft_memchr.c \
@@ -54,6 +55,8 @@ SOURCES = sources/conversions/ft_atoi.c \
 	sources/manipulate_strings/ft_strtrim.c \
 	sources/manipulate_strings/ft_substr.c \
 	sources/manipulate_strings/ft_putstr.c \
+	sources/manipulate_strings/ft_putptr.c \
+	sources/manipulate_strings/ft_puthexa.c \
 	sources/get_next_line/get_next_line.c \
 
 # .c files = .o files
