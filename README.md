@@ -28,14 +28,16 @@
 ## 📁 Files/
 * [`libraries/`](libraries) 
 	Calling for my libraries <br>
-	- ```libft/``` my custom-made library [see the project here](https://github.com/mewmewdevart/libft)
+	- ```libft/``` my custom-made library ( [see the project here](https://github.com/mewmewdevart/libft) )
 	- ```ft_printf.h``` my ft_printf header to connect the functions created for this project
 * [`sources/`](sources)[`ft_printf.c`](sources/ft_printf.c)  My main function implementation
 	- ```ft_printf``` the "controller" 
 	- ```ft_translate``` translate what happens after the % symbol
 		- ```ft_putchar``` write a character, of unsigned char type, to stdout (libft) <br>
 		- ```ft_putnbr``` function to diplay number (converted) with "ft_putchar" function  (libft)
-		- //soon
+		- ```ft_putnbr_unsigned``` function to diplay number (unsigned int) with "ft_putchar" function  (libft)
+		- ```ft_putptr``` function  print the address of pointer with "ft_puthexa" function(libft)
+		- ```ft_puthexa``` function to printf in hexadecimal format (libft)
 * [`Makefile`](Makefile) My build automation between libft and ft_printf libraries
 
 ## 🛠️ Usage
@@ -104,5 +106,11 @@ The example I showed you will allow you to view a string of characters that will
 $ larissa
 ```
 ❗️| You can try to compare my ft_printf() function with the original printf() function, inserting the library ```#include <stdio.h>``` on your code and calling for the printf().
+
+## 📋 Credits
+
+* [Acelera/Rodsmade](https://github.com/rodsmade/Projets_42_SP/)
+* [ft_printf_tester/paulo-santana/](https://github.com/paulo-santana/ft_printf_tester)
+* [printfTester/Tripouille](https://github.com/Tripouille/printfTester)
 
 <p align="center"> Developed with love 💜 by Larissa Cristina Benedito (Mewmew/Larcrist). </p>
