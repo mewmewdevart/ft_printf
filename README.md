@@ -28,26 +28,21 @@
 ## 📁 Files/
 * [`libraries/`](libraries) 
 	Calling for my libraries <br>
-	- ```libft/``` My custom-made library [see the project here](https://github.com/mewmewdevart/libft)
-	- ```ft_printf.h``` My ft_printf header to connect the functions created for this project.
-
-* [`sources/`](sources)[`ft_printf.c`](sources/ft_printf.c)  
-	My main function implementation. <br>
-	- ```ft_printf``` translate what happens after the % symbol
-		- ```ft_putchar``` write a character, of unsigned char type, to stdout <br>
-
+	- ```libft/``` my custom-made library [see the project here](https://github.com/mewmewdevart/libft)
+	- ```ft_printf.h``` my ft_printf header to connect the functions created for this project
+* [`sources/`](sources)[`ft_printf.c`](sources/ft_printf.c)  My main function implementation
+	- ```ft_printf``` the "controller" 
 	- ```ft_translate``` translate what happens after the % symbol
-		- ```ft_putchar``` write a character, of unsigned char type, to stdout <br>
-		- ```ft_putnbr``` function to diplay number (converted) with "ft_putchar" function
+		- ```ft_putchar``` write a character, of unsigned char type, to stdout (libft) <br>
+		- ```ft_putnbr``` function to diplay number (converted) with "ft_putchar" function  (libft)
 		- //soon
-* [`Makefile`](Makefile)
-	- My build automation between libft and ft_printf libraries
+* [`Makefile`](Makefile) My build automation between libft and ft_printf libraries
 
 ## 🛠️ Usage
 
 ### Requirements
 
-The function is written in C language and thus needs the **`make`** and **`gcc` compiler** and some standard **C libraries** to run. <br>
+The function is written in C language and thus needs the **`make`** and **`gcc`** compiler and some standard **C libraries** to run. <br>
 ❗️| Make sure you have all the required tools installed on your local machine then continue with these steps.
 
 ### Instructions
@@ -93,7 +88,6 @@ int	main(void)
 	return (0);
 }
 ```
-
 If you try to compile your .c files with cc using "cc main.c" you will get an undefined symbol error for Libftprintf functions.
 
 You have to tell the file which library it's using:
@@ -109,5 +103,6 @@ The example I showed you will allow you to view a string of characters that will
 ```shell
 $ larissa
 ```
+❗️| You can try to compare my ft_printf() function with the original printf() function, inserting the library ```#include <stdio.h>``` on your code and calling for the printf().
 
 <p align="center"> Developed with love 💜 by Larissa Cristina Benedito (Mewmew/Larcrist). </p>
