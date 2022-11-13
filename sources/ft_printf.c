@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../libraries/ft_printf.h"
-#include <stdio.h>
 
 static int	ft_translate(va_list arg, char character);
 
