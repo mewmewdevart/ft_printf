@@ -14,17 +14,27 @@
 
 int	ft_putnbr(int nb)
 {
-	if (nb < 0)
+	int	count;
+
+	count = 0;
+	if (nb == -2147483648)
 	{
-		ft_putchar('-');
+		count += ft_putchar('-');
+		count += ft_putchar('2');
+		count += ft_putnbr(147483648);
+	}
+	else if (nb < 0)
+	{
+		count += ft_putchar('-');
 		nb = -nb;
+		count += ft_putnbr(nb);
 	}
-	if (nb >= 10)
+	else if (nb > 9)
 	{
-		ft_putnbr(nb / 10);
-		nb = nb % 10;
+		count += ft_putnbr(nb / 10);
+		count += ft_putnbr(nb % 10);
 	}
-	if (nb < 10)
-		ft_putchar(nb + 48);
-	return(nb);
+	else
+		count += ft_putchar(nb + 48);
+	return (count);
 }

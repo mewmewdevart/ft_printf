@@ -78,11 +78,10 @@ all: $(NAME)
 	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of [LIBFT] has been compiled!$(DEF_COLOR)"
 
 $(NAME): $(OBJECTS)
-	@$(AR) $(NAME) $@ $^
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@$(AR) $(NAME) $@ $^
+	@$(AR) $(NAME) $@
 
 clean:
 	@$(REMOVE) $(OBJECTS)

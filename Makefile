@@ -17,7 +17,8 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 REMOVE = rm -rf
 # import library
-LIBFT = ./libftprintf.a
+LIBFT_PATH = ./libraries/libft/
+LIBFT = $(LIBFT_PATH)/libft.a
 
 # my archives/functions
 SOURCE = sources/ft_printf.c \
@@ -41,32 +42,27 @@ all: $(NAME)
 	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of [PRINTF] has been compilated!$(DEF_COLOR)" 
 
 $(NAME): $(LIBFT) $(OBJECTS)
-	$(AR) $(NAME) $@ $^
+	cp $(LIBFT) $(NAME)
+	$(AR) $(NAME) $(OBJECTS)
 
 $(LIBFT):
-	@make -C libraries/libft
-	@mv libraries/libft/libft.a ./libftprintf.a
+	@make -C $(LIBFT_PATH)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-	$(AR) $(NAME) $@ $^
+	$(AR) $(NAME) $@
 
 clean:
 	$(REMOVE) $(OBJECTS)
-	@make clean -C libraries/libft
+	make clean -C $(LIBFT_PATH)
 	@echo "$(BLUE)[PRINTF] Object files cleaned!$(DEF_COLOR)"
-	
 
 fclean: clean
 	$(REMOVE) $(NAME)
-	@make fclean -C libraries/libft
+	make fclean -C $(LIBFT_PATH)
 	@echo "$(BLUE)[PRINTF] Executable files cleaned!$(DEF_COLOR)"
-	
 
 re: fclean all
-	 @echo "$(BLUE)[PRINTF] Cleaned and rebuilt everything!$(DEF_COLOR)"
+	@echo "$(BLUE)[PRINTF] Cleaned and rebuilt everything!$(DEF_COLOR)"
 
-norm:
-	@norminette
-
-.PHONY: all clean fclean re norm
+.PHONY: all clean fclean re

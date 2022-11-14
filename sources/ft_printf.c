@@ -49,19 +49,19 @@ static int	ft_translate(va_list arg, char character)
 	int	type_return;
 
 	type_return = 0;
-	if (character == 's')
-		type_return = ft_putstr(va_arg(arg, char *));
+	if (character == 'c')
+		type_return += ft_putchar(va_arg(arg, int));
+	else if (character == 's')
+		type_return += ft_putstr(va_arg(arg, char *));
 	else if (character == 'p')
-		type_return = ft_putptr(va_arg(arg, unsigned long int));
+		type_return += ft_putptr(va_arg(arg, unsigned long int));
 	else if (character == 'd' || character == 'i')
-		type_return = ft_putnbr(va_arg(arg, unsigned long int));
+		type_return += ft_putnbr(va_arg(arg, unsigned long int));
 	else if (character == 'u')
-		type_return = ft_putnbr_unsigned(va_arg(arg, unsigned int));
+		type_return += ft_putnbr_unsigned(va_arg(arg, unsigned int));
 	else if (character == 'x' || character == 'X')
-		type_return = ft_puthexa(va_arg(arg, unsigned int), character);
+		type_return += ft_puthexa(va_arg(arg, unsigned int), character);
 	else if (character == '%')
-		type_return = ft_putchar('%');
-	else
-		type_return = ft_putchar(va_arg(arg, int));
+		return (ft_putchar('%'));
 	return (type_return);
 }

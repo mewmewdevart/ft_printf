@@ -19,12 +19,12 @@ int	ft_putptr(unsigned long int ptr)
 	address = 0;
 	if (!ptr)
 	{
-		address += ft_putstr ("(nill)");
+		address += write (1, "(nil)", 5);
 		return (address);
 	}
 	else
 	{
-		address = ft_putstr ("0x");
+		address = write (1, "0x", 2);
 		address += ft_puthexa(ptr, 'x');
 	}
 	return (address);

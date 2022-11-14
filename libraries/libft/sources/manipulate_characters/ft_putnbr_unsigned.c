@@ -14,7 +14,7 @@
 
 int	ft_putnbr_unsigned(unsigned int nb)
 {
-	unsigned int number;
+	unsigned int	number;
 
 	number = 0;
 	if (nb <= 9)
