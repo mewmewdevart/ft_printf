@@ -6,7 +6,7 @@
 /*   By: larcrist <larcrist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 20:06:54 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/09 00:31:58 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:56:30 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	ft_printf(const char *str, ...)
 	return (type_return);
 }
 
+//function to translate and interpret what happens after the %
 static int	ft_translate(va_list arg, char character)
 {
 	int	type_return;

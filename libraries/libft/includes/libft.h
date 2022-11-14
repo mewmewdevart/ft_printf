@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 02:19:27 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/10 21:00:29 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:58:29 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@
 // hexadecimal of ft_printf - putptr, puthexa
 # define HEX_LOWCASE "0123456789abcdef"
 # define HEX_UPCASE  "0123456789ABCDEF"
+
+# define INT_MAX +2147483647
+# define INT_MIN -2147483648
 
 /* -------◊	FUNCTIONS TO MANIPULATE CHARACTERS	◊------- */
 int			ft_isalnum(int c);
