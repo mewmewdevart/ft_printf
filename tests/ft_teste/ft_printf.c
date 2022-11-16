@@ -55,6 +55,8 @@ static int	ft_translate(va_list arg, char character)
 		type_return = ft_putnbr(va_arg(arg, int));
 	else if (character == 'u')
 		type_return = ft_putnbr_unsigned(va_arg(arg, int));
+	else if (character == 'x' || character == 'X')
+		type_return = ft_puthex(va_arg(arg, unsigned long int), character);
 	else if (character == 'p')
 		type_return = ft_putptr(va_arg(arg, unsigned long int));
 	else if (character == '%')
