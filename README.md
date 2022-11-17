@@ -37,7 +37,7 @@
 		- ```ft_putnbr``` function to diplay number (converted) with "ft_putchar" function  (libft)
 		- ```ft_putnbr_unsigned``` function to diplay number (unsigned int) with "ft_putchar" function  (libft)
 		- ```ft_putptr``` function  print the address of pointer with "ft_puthexa" function(libft)
-		- ```ft_puthexa``` function to printf in hexadecimal format (libft)
+		- ```ft_puthex``` function to printf in hexadecimal format (libft)
 * [`Makefile`](Makefile) My build automation between libft and ft_printf libraries
 
 ## 🛠️ Usage
