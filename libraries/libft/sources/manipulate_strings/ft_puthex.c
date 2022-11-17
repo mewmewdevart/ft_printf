@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthexa.c                                       :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: larcrist <larcrist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:19:45 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/13 16:19:48 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/17 15:12:51 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-//this function is helper of ft_putptr (printer address of pointer)
-int	ft_puthexa(unsigned long number, int flag)
+int	ft_puthex(unsigned int number, int flag)
 {
 	int	count;
 
 	count = 0;
 	if (number >= 16)
 	{
-		count = count + ft_puthexa((number / 16), flag);
-		count = count + ft_puthexa((number % 16), flag);
+		count += ft_puthex((number / 16), flag);
+		count += ft_puthex((number % 16), flag);
 	}
 	else
 	{
 		if (flag == 'x')
-			return (ft_putchar(HEX_LOWCASE[number]));
+			count = ft_putchar(HEX_LOWCASE[number]);
 		else
-			return (ft_putchar(HEX_UPCASE[number]));
+			count = ft_putchar(HEX_UPCASE[number]);
 	}
 	return (count);
 }

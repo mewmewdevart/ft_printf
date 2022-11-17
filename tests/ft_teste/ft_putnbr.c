@@ -5,7 +5,7 @@ int	ft_putnbr(int nbr)
     int	count;
 
 	count = 0;
-	if (nbr == INT_MIN)
+	if (nbr == -2147483648)
 	{
 		count = count + ft_putchar('-');
 		count = count + ft_putchar('2');

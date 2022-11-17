@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 02:19:27 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/14 16:58:29 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/17 15:04:18 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@
 # define INT_MAX +2147483647
 # define INT_MIN -2147483648
 
+# ifdef __linux__
+#  define NULLABLE "(nil)"
+# else
+#  define NULLABLE "0x0"
+# endif
+
 /* -------◊	FUNCTIONS TO MANIPULATE CHARACTERS	◊------- */
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
@@ -36,6 +42,7 @@ int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_putchar(char c);
 int			ft_putnbr(int nb);
+int			ft_putnbr_unsigned(unsigned int number);
 
 /* -------◊	FUNCTIONS TO MANIPULATE STRINGS	◊------- */
 size_t		ft_strlen(const char *s);
@@ -53,8 +60,7 @@ char		**ft_split(char const *str, char c);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 int			ft_putptr(unsigned long int ptr);
-int			ft_puthexa(unsigned long number, int flag);
-int			ft_putnbr_unsigned(unsigned int nb);
+int			ft_puthex(unsigned int number, int flag);
 
 /* -------◊		FUNCTIONS TO CONVERSION/STRINGS FOR INTEGERS	◊------- */
 int			ft_atoi(const char *nptr);

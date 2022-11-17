@@ -1,5 +1,7 @@
 #include "ft_printf.h"
 
+static int	ft_puthex_address(unsigned long int number, int flag);
+
 int	ft_putptr(unsigned long int ptr)
 {
     int address;
@@ -13,20 +15,20 @@ int	ft_putptr(unsigned long int ptr)
     else
     {
         address = write (1, "0x", 2);
-        address += ft_puthex(ptr, 'x');
+        address += ft_puthex_address(ptr, 'x');
     }
     return (address);
 }
 
-int	ft_puthex(unsigned long int number, int flag)
+static int	ft_puthex_address(unsigned long int number, int flag)
 {
 	int	count;
 
 	count = 0;
 	if (number >= 16)
 	{
-		count += ft_puthex((number / 16), flag);
-		count += ft_puthex((number % 16), flag);
+		count += ft_puthex_address((number / 16), flag);
+		count += ft_puthex_address((number % 16), flag);
 	}
 	else
 	{

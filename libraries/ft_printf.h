@@ -6,7 +6,7 @@
 /*   By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:33:51 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/14 17:24:10 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/17 15:02:59 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@
 # include "libft/includes/libft.h" // libft
 
 /* -------◊	PRINTF	◊------- */
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *str, ...);
 
 #endif

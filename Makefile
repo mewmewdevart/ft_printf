@@ -6,7 +6,7 @@
 #    By: larcrist <larcrist@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 11:54:05 by larcrist          #+#    #+#              #
-#    Updated: 2022/11/09 01:09:03 by larcrist         ###   ########.fr        #
+#    Updated: 2022/11/17 15:24:51 by larcrist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ WHITE = \033[0;97m
 
 # compilation and linking
 all: $(NAME)
-	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of [PRINTF] has been compilated!$(DEF_COLOR)" 
+	@echo "$(GREEN)◞( ､ᐛ)､＿/ The Makefile of [FT_PRINTF] has been compilated!$(DEF_COLOR)" 
 
 $(NAME): $(LIBFT) $(OBJECTS)
 	cp $(LIBFT) $(NAME)

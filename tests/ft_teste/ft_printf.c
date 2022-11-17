@@ -6,13 +6,13 @@
 /*   By: larcrist <larcrist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 20:06:54 by larcrist          #+#    #+#             */
-/*   Updated: 2022/11/14 16:56:30 by larcrist         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:23:20 by larcrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_translate(va_list arg, char character);
+static int	ft_translate(char flag, va_list arg);
 
 int	ft_printf(const char *str, ...)
 {
@@ -28,13 +28,11 @@ int	ft_printf(const char *str, ...)
 	while (str[index] != '\0')
 	{
 		if (str[index] != '%')
-		{
 			count += ft_putchar(str[index]);
-		}
 		else
 		{
 			index++;
-			count += ft_translate(arg, str[index]);
+			count += ft_translate(str[index], arg);
 		}
 		index++;
 	}
@@ -42,24 +40,24 @@ int	ft_printf(const char *str, ...)
 	return (count);
 }
 
-static int	ft_translate(va_list arg, char character)
+static int	ft_translate(char flag, va_list arg)
 {
 	int	type_return;
 
 	type_return = 0;
-	if (character == 'c')
+	if (flag == 'c')
 		type_return = ft_putchar(va_arg(arg, int));
-	else if (character == 's')
+	else if (flag == 's')
 		type_return = ft_putstr(va_arg(arg, char *));
-	else if (character == 'd' || character == 'i')
-		type_return = ft_putnbr(va_arg(arg, int));
-	else if (character == 'u')
+	else if (flag == 'd' || flag == 'i')
+		type_return = ft_putnbr(va_arg(arg, int)); 
+	else if (flag == 'u')
 		type_return = ft_putnbr_unsigned(va_arg(arg, int));
-	else if (character == 'x' || character == 'X')
-		type_return = ft_puthex(va_arg(arg, unsigned long int), character);
-	else if (character == 'p')
+	else if (flag == 'x' || flag == 'X')
+		type_return = ft_puthex(va_arg(arg, unsigned long int), flag);
+	else if (flag == 'p')
 		type_return = ft_putptr(va_arg(arg, unsigned long int));
-	else if (character == '%')
+	else if (flag == '%')
 		return (ft_putchar('%'));
 	return (type_return);
 }
