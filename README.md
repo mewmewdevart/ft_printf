@@ -1,5 +1,10 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50052600/202604870-5f64e421-2529-4e21-b94a-25a945b2af3b.png" />
+</p>
+
+
 <h1 align="center">
- ft_printf [⚠️ In Development]
+ ft_printf
 </h1>
 
 <p align="center">
