@@ -106,7 +106,7 @@ To run the program, enter the following in the command prompt:
 ```shell
 $ ./prog_example
 ```
-The example I showed you will allow you to view a string of characters that will be displayed in your terminal like this:
+The example I showed you will allow you to view a string of characters that will be displayed in your output terminal like this:
 ```shell
 $ larissa
 ```
@@ -122,7 +122,7 @@ int	main(void)
 	return (0);
 }
 ```
-Output
+Output:
 ```
 42 and 42 is very cool
 ```
