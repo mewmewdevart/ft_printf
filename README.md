@@ -49,7 +49,7 @@
 
 ### Requirements
 
-This project requires [GNU Compiler Collection](https://gcc.gnu.org/) and [GNU Make](https://www.gnu.org/software/make/)compiler. <br>
+This project requires [GNU Compiler Collection](https://gcc.gnu.org/) and [GNU Make](https://www.gnu.org/software/make/) compiler. <br>
 ❗️| Make sure you have all the required tools installed on your local machine then continue with these steps.
 
 ### Instructions
