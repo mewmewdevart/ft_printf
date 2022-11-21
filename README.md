@@ -49,7 +49,7 @@
 
 ### Requirements
 
-The function is written in C language and thus needs the **`make`** and **`gcc`** compiler and some standard **C libraries** to run. <br>
+This project requires [GNU Compiler Collection](https://gcc.gnu.org/) and [GNU Make](https://www.gnu.org/software/make/)compiler. <br>
 ❗️| Make sure you have all the required tools installed on your local machine then continue with these steps.
 
 ### Instructions
@@ -110,7 +110,23 @@ The example I showed you will allow you to view a string of characters that will
 ```shell
 $ larissa
 ```
-❗️| You can try to compare my ft_printf() function with the original printf() function, inserting the library ```#include <stdio.h>``` on your code and calling for the printf().
+
+You can try `c`, `s`, `p`, `d`, `i`, `u`, `x`, `X` or `%` conversions!
+
+```c
+#include "libraries/ft_printf.h"
+
+int	main(void)
+{
+	ft_printf("%d and %i is very %s", 42, 42, "cool");
+	return (0);
+}
+```
+Output
+```
+42 and 42 is very cool
+```
+
 
 ## 📋 Credits
 
